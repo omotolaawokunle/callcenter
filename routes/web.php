@@ -33,6 +33,14 @@ Route::post('/call/create', 'CallController@store');
 
 Route::post('/sms/create', 'SMSController@store');
 
-Route::get('/contact/{id}/delete','ContactController@destroy');
+Route::get('/contact/{id}/delete', 'ContactController@destroy');
 
 Route::patch('/contact/{id}', 'ContactController@update');
+
+//Route::get('/broadcast', 'BroadcastController@index');
+
+Route::post('/broadcast/sendBroadcast', 'CallController@processForm');
+
+Route::post('/broadcast/processAudio', 'CallController@processAudio');
+
+Route::post('/broadcast/deleteAudio', 'CallController@deleteAudio');
