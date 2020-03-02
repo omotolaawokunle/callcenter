@@ -2080,11 +2080,6 @@ function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 //
 //
 //
-//
-//
-//
-//
-//
 var MicRecorder = __webpack_require__(/*! mic-recorder-to-mp3 */ "./node_modules/mic-recorder-to-mp3/dist/index.js");
 
 /* harmony default export */ __webpack_exports__["default"] = ({
@@ -2138,7 +2133,7 @@ var MicRecorder = __webpack_require__(/*! mic-recorder-to-mp3 */ "./node_modules
             "Content-Type": "multipart/form-data"
           }
         }).then(function (response) {
-          if (response.data.message = undefined) {
+          if (typeof response.data === "string") {
             _this2.fileName = response.data;
           } else {
             alert(response.data.message);
@@ -6733,7 +6728,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, "\n.flex[data-v-b364ec08] {\n    display: -webkit-box;\n    display: flex;\n}\n.items-center[data-v-b364ec08] {\n    -webkit-box-align: center;\n            align-items: center;\n}\n.justify-between[data-v-b364ec08] {\n    -webkit-box-pack: justify;\n            justify-content: space-between;\n}\n", ""]);
+exports.push([module.i, "\n.flex[data-v-b364ec08] {\n  display: -webkit-box;\n  display: flex;\n}\n.items-center[data-v-b364ec08] {\n  -webkit-box-align: center;\n          align-items: center;\n}\n.justify-between[data-v-b364ec08] {\n  -webkit-box-pack: justify;\n          justify-content: space-between;\n}\n", ""]);
 
 // exports
 
@@ -54345,7 +54340,7 @@ var render = function() {
             },
             [
               _c("i", { staticClass: "icon ion-md-delete" }),
-              _vm._v(" Delete\n        ")
+              _vm._v(" Delete\n    ")
             ]
           )
         : _vm._e()
@@ -54362,7 +54357,7 @@ var render = function() {
             },
             [
               _c("i", { staticClass: "icon ion-md-microphone" }),
-              _vm._v(" Record Audio\n        ")
+              _vm._v(" Record Audio\n    ")
             ]
           )
         : _vm._e(),
@@ -54377,7 +54372,7 @@ var render = function() {
             },
             [
               _c("i", { staticClass: "icon ion-ios-stop" }),
-              _vm._v(" Stop\n        ")
+              _vm._v(" Stop\n    ")
             ]
           )
         : _vm._e(),

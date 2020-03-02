@@ -37,10 +37,10 @@ Route::get('/contact/{id}/delete', 'ContactController@destroy');
 
 Route::patch('/contact/{id}', 'ContactController@update');
 
-Route::get('/broadcast', 'BroadcastController@index');
+//Route::get('/broadcast', 'BroadcastController@index');
 
-Route::post('/broadcast/sendBroadcast', 'BroadcastController@processForm');
+Route::post('/broadcast/sendBroadcast', 'CallController@processForm');
 
-Route::post('/broadcast/processAudio', 'BroadcastController@processAudio');
+Route::post('/broadcast/processAudio', 'CallController@processAudio');
 
-Route::post('/broadcast/deleteAudio', 'BroadcastController@deleteAudio');
+Route::post('/broadcast/deleteAudio', 'CallController@deleteAudio');
